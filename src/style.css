@@ -243,6 +243,490 @@ button:focus-visible {
 .hero-actions .primary {
   padding: 17px 23px;
 }
+
+
+/* =====================================
+   MUSTARD SEED RESPONSIVE NAVBAR
+===================================== */
+
+.topbar,
+.header {
+  box-sizing: border-box;
+}
+
+.topbar *,
+.header * {
+  box-sizing: border-box;
+}
+
+/* TOP BAR */
+.topbar {
+  background: #173d2c;
+  color: #fff;
+  font-size: 12px;
+  width: 100%;
+}
+
+.topbar .top-inner {
+  max-width: 1440px;
+  margin: auto;
+  padding: 9px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.top-contacts {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.top-contacts a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.top-contacts a:hover {
+  color: #e4c36b;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.07);
+}
+
+.header .nav-inner {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-height: 85px;
+}
+
+/* BRAND */
+.header .brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.brand-logo-wrapper {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.header .brand-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.header .brand-name {
+  display: flex;
+  flex-direction: column;
+  color: #173d2c;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.header .brand-name small {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  margin-top: 4px;
+}
+
+/* DESKTOP NAV */
+.header .desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.1vw, 20px);
+  margin-left: auto;
+}
+
+.header .nav-item {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header .nav-item > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #28382e;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 14px 0;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.header .nav-item > a:hover,
+.header .nav-item > a.active {
+  color: #ad8431;
+}
+
+/* DROPDOWN */
+.header .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 230px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.13);
+  border: 1px solid #eee;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+  z-index: 1100;
+}
+
+.header .nav-item:hover .dropdown,
+.header .nav-item:focus-within .dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header .dropdown a {
+  display: block;
+  padding: 11px 13px;
+  border-radius: 5px;
+  color: #28382e;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.header .dropdown a:hover {
+  background: #edf4ef;
+  color: #173d2c;
+}
+
+/* RIGHT ACTIONS */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.header .apply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #173d2c;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.header .apply-btn:hover {
+  background: #ad8431;
+  transform: translateY(-1px);
+}
+
+/* HAMBURGER */
+.header .mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background: #f0f5f1;
+  color: #173d2c;
+  border: 0;
+  border-radius: 7px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* MOBILE NAV HIDDEN ON DESKTOP */
+.header .mobile-nav {
+  display: none;
+}
+
+/* =====================================
+   SMALL LAPTOPS / TABLETS
+===================================== */
+@media (max-width: 1200px) {
+  .header .desktop-nav {
+    display: none;
+  }
+
+  .header .mobile-toggle {
+    display: flex;
+  }
+
+  .header .nav-inner {
+    min-height: 75px;
+  }
+
+  .header .mobile-nav {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid #edf0ed;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+    max-height: calc(100dvh - 85px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .mobile-nav-content {
+    max-width: 1440px;
+    margin: auto;
+    padding: 12px 24px 25px;
+  }
+
+  .mobile-nav-group {
+    border-bottom: 1px solid #edf0ed;
+  }
+
+  .header .mobile-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 49px;
+  }
+
+  .header .mobile-item > a {
+    flex: 1;
+    color: #28382e;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 15px 4px;
+  }
+
+  .header .mobile-item > a.active {
+    color: #ad8431;
+  }
+
+  .header .submenu-toggle {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: #173d2c;
+    cursor: pointer;
+  }
+
+  .header .submenu-toggle svg {
+    transition: transform 0.2s ease;
+  }
+
+  .header .submenu-toggle.expanded svg {
+    transform: rotate(180deg);
+  }
+
+  .header .mobile-sub {
+    display: flex;
+    flex-direction: column;
+    background: #f5f8f5;
+    border-radius: 6px;
+    margin: 0 0 8px 10px;
+    padding: 5px 0;
+  }
+
+  .header .mobile-sub a {
+    padding: 12px 18px;
+    color: #34473a;
+    font-size: 13px;
+    text-decoration: none;
+    border-bottom: 1px solid #e8ede8;
+  }
+
+  .header .mobile-sub a:last-child {
+    border-bottom: none;
+  }
+
+  .header .mobile-sub a:hover {
+    background: #e7f0e9;
+    color: #173d2c;
+  }
+
+  .header .mobile-apply-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    background: #173d2c;
+    color: #fff;
+    padding: 14px;
+    margin-top: 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .header .mobile-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 5px 5px;
+  }
+
+  .header .mobile-contact a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #45604e;
+    font-size: 13px;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* =====================================
+   MOBILE PHONES
+===================================== */
+@media (max-width: 768px) {
+  .topbar .top-inner {
+    justify-content: center;
+    padding: 8px 14px;
+  }
+
+  .top-welcome {
+    display: none;
+  }
+
+  .top-contacts {
+    justify-content: center;
+    gap: 8px 18px;
+    font-size: 11px;
+  }
+
+  .header .nav-inner {
+    padding: 10px 16px;
+    min-height: 70px;
+    gap: 10px;
+  }
+
+  .brand-logo-wrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .header .brand-name {
+    font-size: 15px;
+  }
+
+  .header .brand-name small {
+    font-size: 8px;
+    letter-spacing: 0.8px;
+  }
+
+  .header .apply-btn {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .mobile-nav-content {
+    padding: 10px 16px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-contacts a[href^="mailto:"] {
+    display: none;
+  }
+
+  .header .nav-inner {
+    padding: 9px 12px;
+    gap: 8px;
+  }
+
+  .header .brand {
+    gap: 7px;
+  }
+
+  .brand-logo-wrapper {
+    width: 39px;
+    height: 39px;
+  }
+
+  .header .brand-name {
+    font-size: 12px;
+    letter-spacing: 0;
+  }
+
+  .header .brand-name small {
+    font-size: 7px;
+    letter-spacing: 0.3px;
+    margin-top: 3px;
+  }
+
+  .header .apply-btn {
+    display: none;
+  }
+
+  .header .mobile-toggle {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* EXTRA SMALL PHONES */
+@media (max-width: 350px) {
+  .header .brand-name {
+    font-size: 11px;
+  }
+
+  .header .brand-name small {
+    font-size: 6.5px;
+  }
+
+  .brand-logo-wrapper {
+    width: 35px;
+    height: 35px;
+  }
+}
+
 .outline {
   border: 1px solid #fff9;
   color: white;
