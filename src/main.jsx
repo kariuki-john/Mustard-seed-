@@ -1,0 +1,27 @@
+import React from 'react';
+import {createRoot} from 'react-dom/client';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home.jsx';
+import AboutUs from './pages/AboutUs.jsx';
+import Welcome from './pages/Welcome.jsx';
+import FAQs from './pages/FAQs.jsx';
+import OurSchool from './pages/OurSchool.jsx';
+import EarlyYears from './pages/EarlyYears.jsx';
+import JuniorSchool from './pages/JuniorSchool.jsx';
+import SeniorSchool from './pages/SeniorSchool.jsx';
+import FlexBoarding from './pages/FlexBoarding.jsx';
+import Transport from './pages/Transport.jsx';
+import Calendar from './pages/Calendar.jsx';
+import JobBoard from './pages/JobBoard.jsx';
+import Admissions from './pages/Admissions.jsx';
+import SchoolFees from './pages/SchoolFees.jsx';
+import StudentApplicationForm from './pages/StudentApplicationForm.jsx';
+import Gallery from './pages/Gallery.jsx';
+import News from './pages/News.jsx';
+import ContactUs from './pages/ContactUs.jsx';
+import Policies from './pages/Policies.jsx';
+import './style.css';
+function App(){return <BrowserRouter><Navbar/><Routes><Route path="/" element={<Home/>} /><Route path="/about-us" element={<AboutUs/>} /><Route path="/about-us/welcome" element={<Welcome/>} /><Route path="/about-us/faqs" element={<FAQs/>} /><Route path="/our-school" element={<OurSchool/>} /><Route path="/our-school/early-years" element={<EarlyYears/>} /><Route path="/our-school/junior-school" element={<JuniorSchool/>} /><Route path="/our-school/senior-school" element={<SeniorSchool/>} /><Route path="/our-school/flex-boarding" element={<FlexBoarding/>} /><Route path="/our-school/transport" element={<Transport/>} /><Route path="/our-school/calendar" element={<Calendar/>} /><Route path="/our-school/job-board" element={<JobBoard/>} /><Route path="/admissions" element={<Admissions/>} /><Route path="/admissions/school-fees" element={<SchoolFees/>} /><Route path="/admissions/application" element={<StudentApplicationForm/>} /><Route path="/gallery" element={<Gallery/>} /><Route path="/news" element={<News/>} /><Route path="/contact-us" element={<ContactUs/>} /><Route path="/policies" element={<Policies/>} /><Route path='*' element={<main className='container inner-content'><h1>Page not found</h1><p>Use the navigation menu to explore our school.</p></main>}/></Routes><Footer/></BrowserRouter>}
+createRoot(document.getElementById('root')).render(<App/>);

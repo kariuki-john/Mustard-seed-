@@ -1,0 +1,4 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import PageLayout from '../components/PageLayout';
+export default function OurSchool() { return <PageLayout title="Our School"><div className="page-feature"><span className="eyebrow">MUSTARD SEED INTERNATIONAL SCHOOL</span><h2>Explore our learning community</h2><p className="page-lead">From a child’s first classroom experiences to their senior years, discover the programmes and services that support each stage.</p><div className="placeholder-card"><div><h3>Learning at every stage</h3><p>Explore Early Years, Junior School, Senior School, boarding options, transport, and our school calendar.</p></div></div><div className="page-actions"><Link to="/our-school/early-years">Early Years</Link><Link to="/our-school/junior-school">Junior School</Link><Link to="/our-school/senior-school">Senior School</Link></div></div></PageLayout>; }
