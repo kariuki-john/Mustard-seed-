@@ -447,7 +447,8 @@ export default function ContactUs() {
                 </p>
 
                 <p className="mt-5 font-semibold text-green-700">
-                  Kenya
+                  Kiamunyi, Kabarak Highway, few Kilometers from Nakuru CBD,
+                  
                 </p>
 
                 <p className="mt-2 text-xs text-gray-500">
