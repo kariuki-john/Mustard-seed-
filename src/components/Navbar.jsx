@@ -59,7 +59,7 @@ export default function Navbar() {
       <header className="header">
         <div className="container nav-inner">
           <Link className="brand" to="/">
-            <span className="brand-logo">
+            <span className="h-10 w-10">
               <img src={logo} className="brand-icon" alt="Mustard Seed International Schools logo" />
             </span>
             <span className="brand-name">

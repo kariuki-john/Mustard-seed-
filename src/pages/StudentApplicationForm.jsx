@@ -519,10 +519,7 @@ Submitted through the school website.
               >
                 <Mail size={18} />
                 {SCHOOL_EMAIL}
-                <br/>
-                <span className="text-sm text-green-700">
-                  Call: {SCHOOL_PHONE}
-                </span>
+                
               </a>
 
             </div>
